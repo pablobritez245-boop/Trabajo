@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Proyectos académicos y personales desarrollados por Pablo Britez.">
+
+    <title>Proyectos | Pablo Britez</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+   <!--Iconos  -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(
+                135deg,
+                #020617 0%,
+                #0f172a 25%,
+                #0b5563 65%,
+                #0f766e 100%
+            );
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(2, 6, 23, 0.45) !important;
+        }
+
+        .project-card {
+            background-color: rgba(15, 23, 42, 0.92);
+            border: 1px solid #0dcaf0;
+            border-radius: 16px;
+            overflow: hidden;
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(13, 202, 240, 0.25) !important;
+        }
+
+        .project-image-container {
+            height: 260px;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.04);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .project-icon {
+            font-size: 6rem;
+            color: #0dcaf0;
+        }
+
+        .technology-badge {
+            margin: 3px;
+        }
+
+        .modal-content {
+            background-color: #0f172a;
+            color: white;
+            border: 1px solid #0dcaf0;
+        }
+
+        .modal-header,
+        .modal-footer {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        footer {
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body class="text-light">
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold"
+               href="index.html">
+
+                <i class="bi bi-code-slash text-info"></i>
+                Pablo Britez
+
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls="menu"
+                aria-expanded="false"
+                aria-label="Abrir menú de navegación">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse"
+                 id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="sobremi.html">
+                            Sobre mí
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="habilidades.html">
+                            Habilidades
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="proyectos.html">
+                            Proyectos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+   
+    <main class="container py-5">
+
+        <section class="text-center mb-5">
+
+            <span class="badge bg-info text-dark mb-3">
+                Desarrollo y programación
+            </span>
+
+            <h1 class="display-4 fw-bold">
+                Mis Proyectos
+            </h1>
+
+            <p class="lead opacity-75 mx-auto"
+               style="max-width: 850px;">
+
+                Durante mi formación académica he desarrollado proyectos
+                relacionados con programación, análisis de sistemas y
+                desarrollo web. Aquí puedes conocer sus características
+                principales y acceder a sus demostraciones.
+
+            </p>
+
+        </section>
+
+        <section class="row justify-content-center g-4">
+
+            
+            <div class="col-md-10 col-lg-6">
+
+                <article class="card project-card text-light shadow-lg h-100">
+
+                    <div class="project-image-container">
+
+                        <img
+                            src="imagenes/logo_creditech-removebg-preview.png"
+                            class="project-image"
+                            alt="Logotipo del sistema CrediTech"
+                            onerror="mostrarIconoCreditech(this)">
+
+                    </div>
+
+                    <div class="card-body d-flex flex-column p-4">
+
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+
+                            <h2 class="card-title h3 mb-0">
+                                CrediTech
+                            </h2>
+
+                            <span class="badge bg-success">
+                                Proyecto académico
+                            </span>
+
+                        </div>
+
+                        <p class="card-text opacity-75">
+
+                            Sistema de gestión de créditos diseñado para
+                            administrar clientes, solicitudes, operaciones
+                            crediticias, cuotas y pagos desde una interfaz
+                            centralizada.
+
+                        </p>
+
+                        <h3 class="h6 text-info mt-2">
+                            Funciones principales
+                        </h3>
+
+                        <ul class="opacity-75">
+
+                            <li>Registro y consulta de clientes.</li>
+
+                            <li>Gestión de solicitudes de crédito.</li>
+
+                            <li>Control de créditos aprobados.</li>
+
+                            <li>Registro y seguimiento de pagos.</li>
+
+                            <li>Consulta de cuotas y saldos pendientes.</li>
+
+                            <li>Panel principal con información resumida.</li>
+
+                        </ul>
+
+                        <div class="mb-4">
+
+                            <span class="badge text-bg-primary technology-badge">
+                                HTML5
+                            </span>
+
+                            <span class="badge text-bg-info technology-badge">
+                                Bootstrap
+                            </span>
+
+                            <span class="badge text-bg-warning technology-badge">
+                                JavaScript
+                            </span>
+
+                            <span class="badge text-bg-secondary technology-badge">
+                                Sistema de gestión
+                            </span>
+
+                        </div>
+
+                        <div class="row g-2 mt-auto">
+
+                            <div class="col-sm-6">
+
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-info w-100"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalCreditech">
+
+                                    <i class="bi bi-info-circle-fill"></i>
+                                    Ver detalles
+
+                                </button>
+
+                            </div>
+
+                            <div class="col-sm-6">
+
+                                
+
+                                <a
+                                    href="creditech/inicio.html"
+                                    class="btn btn-primary w-100"
+                                    id="botonCreditech">
+
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                    Abrir CrediTech
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            
+            <div class="col-md-10 col-lg-6">
+
+                <article class="card project-card text-light shadow-lg h-100">
+
+                    <div class="project-image-container">
+
+                        <i class="bi bi-person-workspace project-icon"
+                           aria-hidden="true"></i>
+
+                    </div>
+
+                    <div class="card-body d-flex flex-column p-4">
+
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+
+                            <h2 class="card-title h3 mb-0">
+                                Portafolio Personal
+                            </h2>
+
+                            <span class="badge bg-info text-dark">
+                                Proyecto web
+                            </span>
+
+                        </div>
+
+                        <p class="card-text opacity-75">
+
+                            Sitio web responsivo desarrollado para presentar
+                            mi perfl académico, habilidades, proyectos y
+                            medios de contacto de manera profesional.
+
+                        </p>
+
+                        <h3 class="h6 text-info mt-2">
+                            Características
+                        </h3>
+
+                        <ul class="opacity-75">
+
+                            <li>Navegación entre diferentes páginas.</li>
+
+                            <li>Diseño adaptable a celulares y computadoras.</li>
+
+                            <li>Sección de habilidades y proyectos.</li>
+
+                            <li>Formulario conectado con WhatsApp.</li>
+
+                            <li>Interacciones realizadas con JavaScript.</li>
+
+                        </ul>
+
+                        <div class="mb-4">
+
+                            <span class="badge text-bg-primary technology-badge">
+                                HTML5
+                            </span>
+
+                            <span class="badge text-bg-info technology-badge">
+                                Bootstrap
+                            </span>
+
+                            <span class="badge text-bg-warning technology-badge">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                        <a href="index.html"
+                           class="btn btn-success w-100 mt-auto">
+
+                            <i class="bi bi-house-fill"></i>
+                            Ir al inicio
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+     
+    <div
+        class="modal fade"
+        id="modalCreditech"
+        tabindex="-1"
+        aria-labelledby="tituloModalCreditech"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h2 class="modal-title fs-4"
+                        id="tituloModalCreditech">
+
+                        <i class="bi bi-bank text-info"></i>
+                        Información de CrediTech
+
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Cerrar">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+
+                        <strong>CrediTech</strong> es un sistema
+                        informático orientado a mejorar el control y la
+                        organización de los procesos relacionados con créditos.
+
+                    </p>
+
+                    <div class="row g-3 mt-2">
+
+                        <div class="col-md-6">
+
+                            <div class="border border-secondary rounded p-3 h-100">
+
+                                <h3 class="h5 text-info">
+
+                                    <i class="bi bi-people-fill"></i>
+                                    Clientes
+
+                                </h3>
+
+                                <p class="mb-0 opacity-75">
+
+                                    Permite registrar, buscar y consultar
+                                    información de clientes.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="border border-secondary rounded p-3 h-100">
+
+                                <h3 class="h5 text-info">
+
+                                    <i class="bi bi-file-earmark-text-fill"></i>
+                                    Solicitudes
+
+                                </h3>
+
+                                <p class="mb-0 opacity-75">
+
+                                    Facilita el registro y seguimiento de
+                                    solicitudes de crédito.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="border border-secondary rounded p-3 h-100">
+
+                                <h3 class="h5 text-info">
+
+                                    <i class="bi bi-cash-coin"></i>
+                                    Créditos y cuotas
+
+                                </h3>
+
+                                <p class="mb-0 opacity-75">
+
+                                    Organiza los créditos otorgados, sus cuotas,
+                                    vencimientos y saldos.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="border border-secondary rounded p-3 h-100">
+
+                                <h3 class="h5 text-info">
+
+                                    <i class="bi bi-receipt"></i>
+                                    Pagos
+
+                                </h3>
+
+                                <p class="mb-0 opacity-75">
+
+                                    Permite registrar pagos y consultar el
+                                    historial de operaciones.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Cerrar
+
+                    </button>
+
+                    <a
+                        href="creditech/index.html"
+                        class="btn btn-primary">
+
+                        <i class="bi bi-box-arrow-up-right"></i>
+                        Abrir sistema
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CALCULADORA BÁSICA -->
+
+<div class="col-md-10 col-lg-6">
+
+    <article class="card project-card text-light shadow-lg h-100">
+
+        <div class="project-image-container">
+
+            <i class="bi bi-calculator-fill project-icon"></i>
+
+        </div>
+
+        <div class="card-body d-flex flex-column p-4">
+
+            <div class="d-flex justify-content-between align-items-start mb-3">
+
+                <h2 class="card-title h3 mb-0">
+                    Calculadora Básica
+                </h2>
+
+                <span class="badge bg-warning text-dark">
+                    Programación III
+                </span>
+
+            </div>
+
+            <p class="card-text opacity-75">
+
+                Aplicación desarrollada en la materia de
+                Programación III, para hacer operaciones basicas.
+
+            </p>
+
+            <h3 class="h6 text-info mt-2">
+                Funcionalidades
+            </h3>
+
+            <ul class="opacity-75">
+
+                <li>Suma de dos números.</li>
+
+                <li>Resta.</li>
+
+                <li>Multiplicación.</li>
+
+                <li>División.</li>
+
+                <li>Validación de datos ingresados.</li>
+
+                
+
+            </ul>
+
+            <div class="mb-4">
+
+                <span class="badge text-bg-primary technology-badge">
+                    HTML5
+                </span>
+
+                <span class="badge text-bg-info technology-badge">
+                    CSS
+                </span>
+
+                <span class="badge text-bg-warning technology-badge">
+                    JavaScript
+                </span>
+
+                <span class="badge text-bg-success technology-badge">
+                    Programación III
+                </span>
+
+            </div>
+
+            <div class="row g-2 mt-auto">
+
+                <div class="col-sm-6">
+
+                    <button
+                        class="btn btn-outline-info w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalCalculadora">
+
+                        <i class="bi bi-info-circle-fill"></i>
+
+                        Ver detalles
+
+                    </button>
+
+                </div>
+
+                <div class="col-sm-6">
+
+                    <a href="calculadora/calculadora.html"
+                       class="btn btn-success w-100">
+
+                        <i class="bi bi-play-circle-fill"></i>
+
+                        Probar proyecto
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+    <footer class="text-center p-4 mt-5">
+
+        <p class="mb-1">
+
+            © <span id="anio"></span>
+            Pablo Alexander Britez Aguilera
+
+        </p>
+
+        <small class="text-secondary">
+            Portafolio académico de Ingeniería en Informática
+        </small>
+
+    </footer>
+
+    
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+   
+    <script>
+
+        
+        document.getElementById("anio").textContent =
+            new Date().getFullYear();
+
+
+        
+        function mostrarIconoCreditech(imagen) {
+
+            const contenedor = imagen.parentElement;
+
+            imagen.remove();
+
+            contenedor.innerHTML = `
+                <i class="bi bi-bank project-icon"
+                   aria-label="Ícono representativo de CrediTech">
+                </i>
+            `;
+
+        }
+
+
+        
+        const enlacesMenu =
+            document.querySelectorAll("#menu .nav-link");
+
+        const menu =
+            document.getElementById("menu");
+
+        enlacesMenu.forEach(function (enlace) {
+
+            enlace.addEventListener("click", function () {
+
+                if (window.innerWidth < 992) {
+
+                    const menuBootstrap =
+                        bootstrap.Collapse.getOrCreateInstance(menu);
+
+                    menuBootstrap.hide();
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
