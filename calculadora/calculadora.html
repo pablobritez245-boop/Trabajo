@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Inicio de Cabecera-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fuentes/css/all.min.css">
+     <script src="calcular.js"></script>
+</head>
+    <!--Fin de Cabecera-->
+
+
+    <!--INICIO DE CUERPO DE PAGINA-->
+<body>
+
+    <header class="bg-primary p-4 text-center text-white" ><h1>CALCULADORA BASICA</h1></header>
+    
+    <div class="m-3 p-5">
+        
+        <!-- <h1 class="text-primary">Calculadora Basica</h1> -->
+    
+    <div class="">
+        <label class="form-label" for="n1">Ingrese el primer valor: </label>
+        <input class="form-control" type="number" name="" id="n1">
+       
+    </div>
+
+    <div>
+        <label for="n2">Ingrese el segundo valor: </label>
+       <input class="form-control" type="number" id="n2">
+    </div>
+    
+    <div>
+        
+        <div class="row my-1">
+            <button class="col-12 btn btn-info" onclick="sumar()">SUMAR</button>
+        </div>
+        <div class="row my-1">
+            <button class="col-12 btn btn-danger" onclick="restar()">RESTAR</button>
+        </div>
+        <div class="row my-1">
+             <button class="col-12 btn btn-dark" onclick="multiplicar()">MULTIPLICAR</button>
+        </div>
+        <div class="row my-1">
+            <button class="col-12 btn btn-warning" onclick="dividir()">DIVIDIR</button>
+        </div>
+    </div>
+    
+    <div>
+        <label for="">Resultado: </label>
+        <input class="form-control" type="number" name="" id="result"  >
+    </div>
+
+    
+
+    </div>
+    <footer class="bg-secondary text-center py-3 fixed-bottom">&copy; Pablo Britez - Todos los derechos reservados</footer>
+    
+</body>
+    <!--FIN DE CUERPO DE PAGINA-->
+</html>
